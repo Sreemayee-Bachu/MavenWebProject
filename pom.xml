@@ -33,15 +33,14 @@
 		<groupId>javax.servlet</groupId>
 		<artifactId>servlet-api</artifactId>
 		<version>2.5</version>
-		</dependency>
+	</dependency>
 		<!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-catalina -->
-<dependency>
-    <groupId>org.apache.tomcat</groupId>
-    <artifactId>tomcat-catalina</artifactId>
-    <version>9.0.37</version>
-    <scope>provided</scope>
-</dependency>
-
+	<dependency>
+		<groupId>org.apache.tomcat</groupId>
+		<artifactId>tomcat-catalina</artifactId>
+		<version>9.0.37</version>
+		<scope>provided</scope>
+	</dependency>
 
   </dependencies>
 
@@ -69,9 +68,9 @@
         <plugin>
           <artifactId>maven-war-plugin</artifactId>
           <version>3.2.2</version>
-          <configuration>
+          <!--<configuration>
 				<packagingExcludes>**/.sonar_lock</packagingExcludes>
-			</configuration>
+		  </configuration>-->
         </plugin>
         <plugin>
           <artifactId>maven-install-plugin</artifactId>
@@ -95,7 +94,7 @@
 			</executions>
 			<configuration>
 				<sonar.login>${env.SONAR_TOKEN}</sonar.login>
-				<sonar.projectKey>SampleMP-LTI</sonar.projectKey>
+				<!-- <sonar.projectKey>${env.SONAR_PROJECTKEY}</sonar.projectKey> -->
 			</configuration>
 		</plugin>
 		<!--<plugin>
@@ -108,7 +107,7 @@
 				<password>honey</password>
 				<path>/myapp</path>
 			</configuration>
-		</plugin>-->
+		</plugin>
 	      <plugin>
 		      <groupId>org.apache.tomcat.maven</groupId>
 		      <artifactId>tomcat9-maven-plugin</artifactId>
@@ -120,7 +119,7 @@
 			      <path>/MavenWebProject</path>
 			      <warFile>**/*.war</warFile>
 		      </configuration>
-	      </plugin>
+	      </plugin>-->
       </plugins>
     </pluginManagement>
   </build>
