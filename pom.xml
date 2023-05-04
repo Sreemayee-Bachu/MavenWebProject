@@ -108,7 +108,18 @@
 				<path>/myapp</path>
 			</configuration>
 		</plugin>-->
-		
+	      <plugin>
+		      <groupId>org.apache.tomcat.maven</groupId>
+		      <artifactId>tomcat9-maven-plugin</artifactId>
+		      <version>3.8.3</version>
+		      <configuration>
+			      <url>http://localhost:8080></url>
+			      <username>admin</username>
+			      <password>admin</password>
+			      <path>/MavenWebProject</path>
+			      <warFile>**/*.war</warFile>
+		      </configuration>
+	      </plugin>
       </plugins>
     </pluginManagement>
   </build>
