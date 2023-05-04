@@ -95,7 +95,7 @@
 			</executions>
 			<configuration>
 				<sonar.login>${env.SONAR_TOKEN}</sonar.login>
-				<sonar.projectKey>SampleMT-LTI</sonar.projectKey>
+				<sonar.projectKey>SampleMP-LTI</sonar.projectKey>
 			</configuration>
 		</plugin>
 		<!--<plugin>
